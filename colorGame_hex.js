@@ -29,8 +29,22 @@ function setupSquares() {
 	squares[i].style.background = colors[i];
 
 	squares[i].addEventListener("click", function(){
+		//var clickedColor = this.style.background;
+
 		var clickedColor = this.style.background;
-		console.log(clickedColor);
+		console.log("backgroudn is " +this.style.background);
+		// console.log("background color: " +this.style.background);
+		// clickedColor = colorToHex(clickedColor);
+
+	    var digits = /(.*?)rgb\((\d+), (\d+), (\d+)\)/.exec(clickedColor);
+	    
+	    var red = parseInt(digits[2]);
+	    var green = parseInt(digits[3]);
+	    var blue = parseInt(digits[4]);
+    
+	    var rgb = blue | (green << 8) | (red << 16);
+	    clickedColor = digits[1] + '#' + rgb.toString(16).padStart(6, '0');
+
 		//compare color to pickedColor
 		if (clickedColor === pickedColor) {
 			messageDisplay.textContent = "Correct!";
@@ -81,6 +95,7 @@ function reset() {
 	colors = generateRandomColors(numSquares);
 	//pick a new randon color
 	pickedColor = pickColor();
+	//console.log("pickcolor is" +pickedColor);
 	//change color display to match picked color
 	colorDisplay.textContent = pickedColor;
 	//change the colors of the squares
@@ -146,7 +161,19 @@ resetButton.addEventListener("click", function(){
 
 });
 
-
+function colorToHex(color) {
+    if (color.substr(0, 1) === '#') {
+        return color;
+    }
+    var digits = /(.*?)rgb\((\d+), (\d+), (\d+)\)/.exec(color);
+    
+    var red = parseInt(digits[2]);
+    var green = parseInt(digits[3]);
+    var blue = parseInt(digits[4]);
+    
+    var rgb = blue | (green << 8) | (red << 16);
+    return digits[1] + '#' + rgb.toString(16).padStart(6, '0');
+};
 
 colorDisplay.textContent = pickedColor;
 
@@ -155,7 +182,26 @@ for (var i = 0; i < squares.length; i++) {
 	squares[i].style.background = colors[i];
 
 	squares[i].addEventListener("click", function(){
+
 		var clickedColor = this.style.background;
+		console.log("backgroudn is " +this.style.background);
+		// console.log("background color: " +this.style.background);
+		// clickedColor = colorToHex(clickedColor);
+
+	    var digits = /(.*?)rgb\((\d+), (\d+), (\d+)\)/.exec(clickedColor);
+	    
+	    var red = parseInt(digits[2]);
+	    var green = parseInt(digits[3]);
+	    var blue = parseInt(digits[4]);
+    
+    var rgb = blue | (green << 8) | (red << 16);
+    clickedColor = digits[1] + '#' + rgb.toString(16).padStart(6, '0');
+
+
+	
+		console.log("clickedColor is " +clickedColor);
+		console.log("pickedColor is " +pickedColor);
+
 		//compare color to pickedColor
 		if (clickedColor === pickedColor) {
 			messageDisplay.textContent = "Correct!";
@@ -195,6 +241,7 @@ function generateRandomColors(num){
 		//get random color and push into array
 		array.push(randomColor());
 	}
+	console.log(array);
 	return array;
 	//return array
 }
@@ -208,6 +255,7 @@ function randomColor() {
 	//pick a blue from 0 to 255
 	var b = Math.floor(Math.random() * 256);
 	
-	return "rgb(" + r + ", " + g + ", " + b + ")";
+	return '#'+Math.floor(Math.random()*16777215).toString(16);
+	// return "rgb(" + r + ", " + g + ", " + b + ")";
 
 }
