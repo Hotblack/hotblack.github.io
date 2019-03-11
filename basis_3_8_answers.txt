@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Sample website</title>
+</head>
+<body>
+<h1>These are two different lists</h1>
+<p>Ordered Lists
+	<ol>
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+	</ol>
+<p>Unordered Lists
+	<ul>
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+	</ul>
+</body>
