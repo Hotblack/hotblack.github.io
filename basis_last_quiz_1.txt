@@ -1,0 +1,94 @@
+Intro to Computer Science 
+Name 
+HTML (and CSS) Basics Quiz 
+Date
+ 
+1) Which of the following is the proper format for an HTML link? 
+A) <a www.site.com>link</a> 
+B) <a href=www.site.com>link</a> 
+C) <a href="www.site.com">link 
+D) <a href="www.site.com">link</a> 
+
+2) What is generated from the following HTML code: 
+<p>the <i>best time</i> to wear a <b>striped sweater</b> is <hl>all the to time</h1></p> 
+
+A.) the best time to wear a striped sweater is all the time
+B.) the best time to wear a striped sweater is all the time
+C.) the best time to wear a striped sweater is all the time
+D.) the best time to wear a striped sweater is all the time
+
+
+3.) An image is hosted at https://yourwebsite.com/profile_pic.jpg  
+Which of the following is the proper HTML code to display this image on your webpage? 
+
+A.) <a href="https://yourwebsite.profile_pic.jpg">the image</a> 
+B.) <img src="https://yourwebsite.com/profile_pic.jpg>
+C.) <img>https://yourwebsite.com/profile_pic.jpg
+D.) <img>https://yourwebsite.com/profile_pic.jpg</img> 
+
+4) Which of the following is a valid CSS rule? 
+
+<p> {
+font-size: 22px;
+} 
+ 
+p{ 
+color="green"; 
+} 
+
+h7 {
+color:red
+}
+
+img {
+width: 50px;
+border: 5;
+}
+
+5.) Hand write the result of the following HTML code:
+
+<h1>MY CJ</h1>
+<ul>
+	<li>MATH</li>
+	<ol>
+		<li> PS 59 </li>
+		<li> Study for Test </li>
+	</ol>
+	<li>Computer Science</li>
+		<ul>
+			<li>JUST KIDDING! THERE IS NEVER HOMEWORK IN CS!</li>
+		</ul>
+</ul>
+
+6.) 
+CSS Rules have a selector that defines which HTML elements the rule applies to. We've learned about the following CSS selectors:
+	Select by tag name, by class name, and by id name.
+	Which of the following ranks the selectors from the lowest precedence to the highest precedence?
+A.) tag name, class name, id name
+B.) id name, tag name, class name
+C.) id name, class name, tag name
+D.) class name, id name, tag name
+
+7.) 
+
+p{
+	font-size: 14px;
+}
+
+.captions {
+	font-size: 8px;
+}
+
+#biography {
+	font-size: 10px;
+}
+
+What does USB stand for?
+A.) Universal Serial Bus
+B.) Uniform Software Business
+C.) Univeral Serial Bundle
+D.) Universal Software Bus
+
+Describe the purpose of the USB standard. What do we use USB for?
+
+List and briefly describe 3 electronic components (example: a motor - spins in one direction when given power)
