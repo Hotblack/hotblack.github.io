@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>March 11th 2019 CS In-Class Assignment/Project</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+
+	<h3>PROGRAMMING CHALLENGE</h3>
+		<ol>
+			<li>
+			<h3>The Age Calculator</h3>
+			<p>Forgot how old someone is? Calculate it!</p>
+				<ul>
+					<li>Store the current year in a variable.</li>
+					<li>Store their birth year in a variable.</li>
+					<li>Calculate their 2 possible ages based on the stored values.</li>
+					<li>Output them to the screen like so: "They are either NN or NN", substituting the values.</li>
+				</ul>
+			<p><strong>ANSWER</strong></p>
+			<p><code>var current_year = 2019;</code></p>
+			<p><code>var birth_year = 1978;</code></p>
+			<p><code>var possible_age_1 = current_year - birth_year;</code></p>
+			<p><code>var possible_age_2 = (possible_age_1 - 1);</code></p>
+			<p><code>println("They are either " +possible_age_1 +"or " +possible_age_2);</code></p>
+			<p>NOTE: REMEMBER TO SUBTRACT ONE FROM THE POSSIBLE AGE. IF THE PERSON HAS A BIRTHDAY AFTER THE DATE ON WHICH YOURE DOING THE CALCULATION, THAT MEANS THAT PERSON HASN'T HAD A BIRTHDAY YET AND THEREFORE MUST BE ONE YEAR YOUNGER THAN THE CALCULATION SAYS.</p>
+			</li>
+
+			<li>
+				<h3>The Temperature Converter</h3>
+				<p>Let's make a program to convert celsius tempatures to fahrenheit and vice versa, so we can complain about the weather with our friends oversees.</p>
+				<p><strong>Reminder:</strong>&nbsp;To convert celsius to fahrenheit, multiply by 9, then divide by 5, then add 32. To convert fahrenheit to celsius, deduct 32, then multiply by 5, then divide by 9.<strong>REMEMBER ORDER OF OPERATIONS!</strong></p>
+				<p><strong>Unicode Characters:</strong>&nbsp;To print the degrees symbol in JavaScript, we need to use the write&nbsp;<code>\u00B0</code> to represent the unicode character for the degress symbol.<strong>PLACE THE UNICODE CHARACTER INSIDE THE STRING</strong></p>
+				<ul>
+					<li>Store a celsius temperature into a variable.</li>
+					<li>Convert it to fahrenheit and output "NN&deg;C is NN&deg;F".</li>
+					<li>Now store a fahrenheit temperature into a variable.</li>
+					<li>Convert it to celsius and output "NN&deg;F is NN&deg;C."</li>
+				</ul>
+			</li>
+
+			<p><strong>ANSWER</strong></p>
+			<p><code>var celsius = 37;</code></p>
+			<p><code>println(celsius +"\u00B0 C is " +(celsius * 9 / 5 + 32) +"\u00B0 F");</code></p>
+			<p><code>var fahrenheit = 68;</code></p>
+			<p><code>println(fahrenheit +"\u00B0 F  is " +(fahrenheit - 32 * 5 / 9) +"\u00B0 C");</code></p>
+
+		</ol>
+
+</body>
+</html>
