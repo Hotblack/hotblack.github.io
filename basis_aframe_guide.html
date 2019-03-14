@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul>
+	<li><strong>Setting Position</strong></li>
+		<ul>
+			<li>Be careful of element position. Don't set it out of view!</li>
+				<ul>
+					<li>-5 <= x <= 5</li>
+					<li>-15 <= y <= 15</li>
+					<li>z < 0</li>
+				</ul>
+
+		</ul>
+	<li><strong>3D Coordinate System</strong></li>
+		<ul>
+			<li>This diagram demonstrates how we can determine the <i>positive</i> coordinates of the X, Y, and Z axis.</li>
+				<ul>
+					<li>Positive X is in the "right" direction</li>
+					<li>Positive Y is in the "up" direction</li>
+					<li>Positive Z is in your direction (ie pointed towards you, the viewer). </li>
+				</ul>
+			<img src="3dcoordinate.png">
+
+			<li>We enter these values into the <code>position</code> attribute inside the a-sphere tags</li>
+				<ul>
+					<li>example:</li>
+						<ul>
+							<li>&lt; a-sphere position=".5 1 -5" radius="1" color="red">&lt;/a-sphere &gt; </li>
+							<li>The above code will create a red sphere positioned at x=.5, y=1, z=-5 </li>
+						</ul>
+				</ul>
+			
+		</ul>
+	<li><strong>YOU MUST INCLUDE THE A-FRAME SCRIPT TO YOUR HTML</strong></li>
+		<ul>
+			<li>This must be included inside the &lt;script>&lt;/script> tags inside the &lt;head></li>
+			<li><strong>&lt;script&gt;src="https://aframe.io/releases/0.5.0/aframe.min.js"&gt;&lt;/script&gt;</strong></li>
+		</ul>
+	<li><strong>All code must be located inside the &lt;a-scene> tags</strong></li>
+		<ul>
+			<li>Use the &lt;a-scene> tags in the &lt;body> of the HTML document</li>
+		</ul>
+</ul>
+
+</body>
+</html>
