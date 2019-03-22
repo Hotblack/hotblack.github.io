@@ -1,6 +1,0 @@
-var NUM_OF_CHILDREN = 2;
-var PARTNER_NAME = "Alice";
-var LOCATION = "New York City;
-var JOB_TITLE = "Designer";
-
-console.log("You will be a " +JOB_TITLE +" in " +LOCATION +", and married to " +PARTNER_NAME +" with " +NUM_OF_CHILDREN +" kids.");
