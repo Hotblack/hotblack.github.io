@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+       
+</script>
+    </head>
+    <body>
+      
+       
+
+<a-scene background="color: #ECECEC">
+    
+    <a-plane position = "0 -0.5 -5" rotation="-90 0 0" color="red" height="100" width="100" fog="true"></a-plane>
+    <a-box position="0 0 -6" height= ".5" width="5" depth="10" rotation="0 0 0" color="black"></a-box>
+    <a-asset-item id="cityModel" src="https://codehs.com/uploads/bb20df4d6c96916a94c56a50a0127fb1"></a-asset-item>
+    <a-entity obj-model="obj: #cityModel" position="0 0.5 -5" rotation="-90 0 0" scale="0.05 0.05 0.05" material="color:red"></a-entity>
+    
+    <a-assets>
+    <img id="sky" src="https://codehs.com/uploads/66070d0fdf0719ebc7a7b70f5cea4efd">
+    </a-assets>
+    
+    <a-sky src="#sky"></a-sky>
+    
+    <a-box position="0 0.5 -2" height= ".5" width="5" depth=".1" rotation="0 0 0" color="black"></a-box>
+    <a-text position = "-1.5 0.5 -1.5" value="ALL HAIL THE MIGHTY CUPHEAD!"></a-text>
+
+  
+</a-scene>
+      
+    </body>
+</html>
