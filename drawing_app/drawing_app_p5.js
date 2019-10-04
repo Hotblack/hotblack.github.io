@@ -7,7 +7,7 @@ function setup() {
 }
 
 function touchMoved() {
-	fill(var, var, var);
+	fill(mouseX, mouseX, mouseX);
   line(mouseX, mouseY, pmouseX, pmouseY);
   return false;
 }
