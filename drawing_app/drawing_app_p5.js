@@ -1,3 +1,5 @@
+var color;
+
 function setup() {
   createCanvas(displayWidth, displayHeight);
   strokeWeight(10);
@@ -5,6 +7,7 @@ function setup() {
 }
 
 function touchMoved() {
+	fill(var, var, var);
   line(mouseX, mouseY, pmouseX, pmouseY);
   return false;
 }
