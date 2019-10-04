@@ -8,15 +8,14 @@ void setup(){
 }
 
 void draw(){
-  if(flag){
-    fill(#000000);   
-  }
-  else
+  
     fill(mouseX/2, (mouseX), mouseY/2);   
           
-  println(abs(pmouseX-mouseX));
  
+ if(mousePressed)
+ {
  ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
+ }
 }
 
 void keyPressed(){
