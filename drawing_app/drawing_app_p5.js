@@ -10,7 +10,7 @@ function setup() {
 function touchMoved() {
 
  //line(mouseX, mouseY, pmouseX, pmouseY);
-    ellipse(mouseX, mouseY, pmouseX, pmouseY);
+    ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
 
   return false;
 }
