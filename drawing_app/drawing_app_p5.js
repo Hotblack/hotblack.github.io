@@ -2,8 +2,8 @@ var color;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  strokeWeight(50);
-  stroke(0);
+  //strokeWeight(50);
+  noStroke(0);
   fill(45, 76, 56, 255);
 }
 
