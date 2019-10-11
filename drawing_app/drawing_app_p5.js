@@ -2,7 +2,7 @@ var color;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  //what?
+  //what? ab
   noStroke();
   fill(45, 76, 56, 255);
 }
