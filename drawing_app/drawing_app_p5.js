@@ -5,6 +5,7 @@ function setup() {
   //what? ab
   noStroke();
   fill(45, 76, 56, 255);
+  background(0);
 }
 
 function touchMoved() {
