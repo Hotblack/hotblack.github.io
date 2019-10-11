@@ -33,6 +33,7 @@ function touchMoved() {
 }
 
 function changeBrush() {
+	flag = false;
 	fill(0,0,0);
 }
 
