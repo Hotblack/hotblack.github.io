@@ -1,4 +1,5 @@
 var color;
+var button;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
