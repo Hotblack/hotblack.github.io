@@ -1,5 +1,6 @@
 var color;
 var button;
+var flag;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -15,6 +16,7 @@ function setup() {
   button = createButton('GRADIENT');
   button.position(20,50);
   button.mousePressed(changeGradient);
+  flag = false;
 }
 
 function touchMoved() {
@@ -35,6 +37,6 @@ function changeBrush() {
 }
 
 function changeGradient() {
-	fill(mouseX/2, (mouseX), mouseY/2);
+	flag = true;
 
 }
