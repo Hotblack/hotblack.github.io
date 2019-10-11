@@ -6,7 +6,7 @@ function setup() {
   //what? ab
   noStroke();
   fill(45, 76, 56, 255);
-  background(0);
+  //background(0);
 
   button = createButton('BLACK');
   button.position(20,20);
@@ -20,6 +20,10 @@ function setup() {
 function touchMoved() {
 
  //line(mouseX, mouseY, pmouseX, pmouseY);
+
+ 	if (flag == true) {
+ 		fill(mouseX/2, (mouseX), mouseY/2);
+	}
  
     ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
 
