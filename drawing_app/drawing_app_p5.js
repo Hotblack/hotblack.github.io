@@ -9,13 +9,12 @@ function setup() {
   background(0);
 
   button = createButton('BLACK');
-  button.position(19,19);
+  button.position(20,20);
   button.mousePressed(changeBrush);
 
   button = createButton('GRADIENT');
-  button.position(24,24);
+  button.position(20,50);
   button.mousePressed(changeGradient);
-//tfvgbhnj
 }
 
 function touchMoved() {
