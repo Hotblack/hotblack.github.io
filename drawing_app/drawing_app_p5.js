@@ -2,6 +2,7 @@ var color;
 var button;
 var changeColor;
 var clear;
+var changeEllipse;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -29,6 +30,7 @@ function setup() {
 
     changeColor = false;
     clear = false;
+    changeEllipse = false;
 
 }
 
