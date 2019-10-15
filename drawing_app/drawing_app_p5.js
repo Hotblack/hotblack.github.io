@@ -2,7 +2,7 @@ var color;
 var button;
 var changeColor;
 var clear;
-var changeEllipse;
+var changeGradient;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -24,7 +24,7 @@ function setup() {
   button.mousePressed(changeRed);
 
   button = createButton('CLEAR');
-  button.position(20,80);
+  button.position(20,110);
   button.mousePressed(clear);
 
 
@@ -42,10 +42,9 @@ function touchMoved() {
  		fill(mouseX/2, (mouseX), mouseY/2);
 	}
 
-	if (changeEllipse == true) {
-		ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
+	
+	ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
 
-	}
 
 	// if(changeLine == true) {
 	// 	line 
@@ -70,7 +69,7 @@ function changeRed() {
 }
 
 function changeGradient() {
-	changeEllipse = true;
+	changeColor = true;
 
 }
 
