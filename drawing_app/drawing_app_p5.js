@@ -68,7 +68,7 @@ function changeRed() {
 }
 
 function changeGradient() {
-	flag = true;
+	changeEllipse = true;
 
 }
 
