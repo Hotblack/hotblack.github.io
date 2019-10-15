@@ -1,6 +1,7 @@
 var color;
 var button;
-var flag;
+var changeColor;
+var clear;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -11,33 +12,66 @@ function setup() {
 
   button = createButton('BLACK');
   button.position(20,20);
-  button.mousePressed(changeBrush);
+  button.mousePressed(changeBlack);
 
   button = createButton('GRADIENT');
   button.position(20,50);
   button.mousePressed(changeGradient);
-  flag = false;
+
+  button = createButton('RED');
+  button.position(20,80);
+  button.mousePressed(changeRed);
+
+  button = createButton('CLEAR');
+  button.position(20,80);
+  button.mousePressed(clear);
+
+
+    changeColor = false;
+    clear = false;
+
 }
 
 function touchMoved() {
 
  //line(mouseX, mouseY, pmouseX, pmouseY);
 
- 	if (flag == true) {
+ 	if (changeColor == true) {
  		fill(mouseX/2, (mouseX), mouseY/2);
 	}
+
+	if (changeEllipse == true) {
+		ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
+
+	}
+
+	// if(changeLine == true) {
+	// 	line 
+	// }
+	
+	// if (clear == true) {
+	// 	clear();
+	// }
  
-    ellipse(mouseX, mouseY, abs(pmouseX-mouseX)+10, abs(pmouseY-mouseY)+10);
 
   return false;
 }
 
-function changeBrush() {
-	flag = false;
+function changeBlack() {
+	changeColor = false;
 	fill(0,0,0);
+}
+
+function changeRed() {
+	changeColor = false;
+	fill(255,0,0);
 }
 
 function changeGradient() {
 	flag = true;
 
+}
+
+function clear() {
+	clear();
 }
