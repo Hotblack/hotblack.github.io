@@ -1,370 +1,265 @@
 <!DOCTYPE html>
-<!-- saved from url=(0053)http://getbootstrap.com/examples/carousel/#myCarousel -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
-
-    <title>Adam Jackrel</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- custom CSS that I myself has done -->
-    <link href="./custom.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./Carousel Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
-    <script type="text/javascript" src="./index_mainpage.js"></script>
-
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-80304119-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom styles for this template -->
-    <link href="./Carousel Template for Bootstrap_files/carousel.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="./Thumbnail Gallery - Start Bootstrap Template_files/thumbnail-gallery.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="./css/3-col-portfolio.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script type="text/javascript" src="./wirelib_files/jquery-1.5.min.js"></script>
-    <script type="text/javascript" src="./wirelib_files/wirelib.js"></script>
-    <script type="text/javascript" src="./wirelib_files/may_2.js"></script>
-
-  </head>
-<!-- NAVBAR
-================================================== -->
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="">Adam Jackrel</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="resume_z.pdf">Resume</a></li>
-                <li><a href="mailto:ajackrel@gmail.com">Contact</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="/colorgame.html">Github</a></li>
-                <li class="dropdown">
-                  <a href="http://getbootstrap.com/examples/carousel/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="">Coming Soon</a></li>
-                    <!-- <li><a href="http://getbootstrap.com/examples/carousel/#">Another action</a></li>
-                    <li><a href="http://getbootstrap.com/examples/carousel/#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="http://getbootstrap.com/examples/carousel/#">Separated link</a></li>
-                    <li><a href="http://getbootstrap.com/examples/carousel/#">One more separated link</a></li> -->
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
-    </div>
-
-
-    <!-- Carousel
-    ================================================== -->
-    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="https://40.media.tumblr.com/ffe6201afc1721ad5324a66382355c56/tumblr_nktbf61CDF1trhkr7o1_540.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>TREASON</h1>
-              <p>Treason is an espionage-themed, multimedia, interactive theatrical experience, featuring elements of improvisational performance and role-playing games.</p>
-              <p><a class="btn btn-lg btn-primary" href="treason.html" role="button">See Project</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="https://41.media.tumblr.com/0bc29ee471492e9dc53a93e920c5c729/tumblr_nktaxzcbln1trhklpo1_540.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Nikola Energy Sensing and Automation Platform</h1>
-              <p>A smart energy monitoring system that helps operation managers lower operational costs for large buildings</p>
-              <p><a class="btn btn-lg btn-primary" href="nikola.html" role="button">See Project</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="https://40.media.tumblr.com/b64df00ef724c68cad7a480cc6e578b2/tumblr_n5hdz6Hq6Q1trhklpo1_400.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Laser Pool</h1>
-              <p>An educational game for a younger audience to introduce them to optics, lasers, and reflection/refraction.</p>
-              <p><a class="btn btn-lg btn-primary" href="http://hackslashdie.tumblr.com/post/109545817466/laser-pool" role="button">See Project</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div> -->
-
-    <!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing" id="marketing">
-
-      <!-- Three columns of text below the carousel -->
-
-
-<!-- 
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="smile.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>About</h2>
-          <p>About me!</p>
-          <p><a class="btn btn-default" href="#about" role="button">View details »</a></p>
-        </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="hammer.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Projects</h2>
-          <p>See all my works</p>
-          <p><a class="btn btn-default" href="#projects" role="button">View details »</a></p>
-        </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="paper_curl.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Resume</h2>
-          <p>link to my resume</p>
-          <p><a class="btn btn-default" href="resume_z.pdf" role="button">View details »</a></p>
-        </div>
-      </div> -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <!-- <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE5MC4zMTI1IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjNwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj41MDB4NTAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE5MC4zMTI1IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjNwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj41MDB4NTAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
-
-      <div id="resume">
-        <object data="resume_z.pdf" type="application/pdf" width="100%" height="100%">
- 
-        <p>It appears you don't have a PDF plugin for this browser.
-        No biggie... you can <a href="myfile.pdf">click here to
-        download the PDF file.</a></p>
-        
-        </object>
-        
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE5MC4zMTI1IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjNwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj41MDB4NTAwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true">
-        </div>
-      </div>
-
-     
-
-      <hr class="featurette-divider">   -->
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <!-- <footer>
-        <p class="pull-right"><a href="http://getbootstrap.com/examples/carousel/#">Back to top</a></p>
-        <p>© 2014 Adam Jackrel · <a href="http://getbootstrap.com/examples/carousel/#">Privacy</a> · <a href="http://getbootstrap.com/examples/carousel/#">Terms</a></p>
-      </footer> -->
-
-      <!-- <div id="resume">
-        <object data="resume_z.pdf" type="application/pdf" width="100%" height="100%">
- 
-        <p>It appears you don't have a PDF plugin for this browser.
-        No biggie... you can <a href="myfile.pdf">click here to
-        download the PDF file.</a></p>
-        
-        </object>
-        
-      </div> -->
-
-      <div class="container">
-
-        <div class="row">
-
-            <div id="projects" class="col-lg-12">
-                <h1 class="page-header">Projects, Concepts, and Works-in-Progress</h1>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="worksample1.html" data-toggle="tooltip">
-                    <img id="cracks" class="img-responsive" src="./cracks_thumb.jpg" alt="">
-                </a>
-
-                
-              
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="worksample2.html">
-                    <img class="img-responsive" src="./julia_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="treason.html">
-                    <img class="img-responsive" src="treason_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="nikola_new.html">
-                    <img class="img-responsive" src="nikola_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="bridge.html">
-                    <img class="img-responsive" src="bridge_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="ratrace.html">
-                    <img class="img-responsive" src="ratrace_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="resume_sound.pdf">
-                    <img class="img-responsive" src="vis_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="pills.html">
-                    <img class="img-responsive" src="pills_thumb.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="wirelib.html">
-                    <img class="img-responsive" src="pattern_thumb.jpg" alt="">
-                </a>
-            </div>
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="fab_sidebar.html">
-                    <img class="img-responsive" src="fab_thumb.jpg" alt="">
-                </a>
-            </div>
-            
-        </div>
-
-
-    </div>
-    <!-- /.container -->
-
-    <div class="about" id="about">
-      <h3>Adam Jackrel</h3>
-      <p>I'm just a guy living and working in Brooklyn, New York</p>
-    </div>
-
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>© 2015 Adam Jackrel</p>
-      </footer>
-
-    </div><!-- /.container -->
-
-    <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom or what else could it possibly be">Tooltip on bottom</button> -->
-
-
-
-<!--   <canvas id="bgcanvas" width="1200" height="500" style="background"s>
-    </canvas>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - Digital Artist & Educator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-    #bgcanvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-  </style>  -->
+        :root {
+            --primary-color: #3a0ca3;
+            --secondary-color: #f72585;
+            --text-color: #2b2d42;
+            --bg-color: #f8f9fa;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Carousel Template for Bootstrap_files/jquery.min.js"></script>
-    <script src="./Carousel Template for Bootstrap_files/bootstrap.min.js"></script>
-    <script src="./Carousel Template for Bootstrap_files/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
-  
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" title="" data-original-title="Copy to clipboard">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1425676187819">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com">         <embed src="/assets/flash/ZeroClipboard.swf?noCache=1425676187819" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com" scale="exactfit">                </object></div><svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="23" style="font-weight:bold;font-size:23pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">500x500</text></svg></body></html>
+        header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .hero {
+            height: 35vh;
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(58, 12, 163, 0.6), rgba(247, 37, 133, 0.6));
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 80px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .projects, .education {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .project-item, .education-item {
+            flex: 0 1 calc(33.333% - 40px);
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-item:hover, .education-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .project-item img, .education-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item-content {
+            padding: 20px;
+        }
+
+        .item-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-item, .education-item {
+                flex: 0 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-item, .education-item {
+                flex: 0 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Adam Jackrel</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Creative Technologist & Educator</h1>
+            <p>Transforming ideas into visual experiences and shaping the next generation of thinkers</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="projects" class="section">
+            <h2>Personal Projects</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868" alt="Project 1">
+                    <div class="item-content">
+                        <h3>Interactive Art Installation</h3>
+                        <p>A responsive light sculpture that reacts to audience movement</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2" alt="Project 2">
+                    <div class="item-content">
+                        <h3>Digital Storytelling App</h3>
+                        <p>An innovative app that combines AR and traditional narratives</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead" alt="Project 3">
+                    <div class="item-content">
+                        <h3>Virtual Gallery Experience</h3>
+                        <p>A VR platform showcasing emerging artists from around the world</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Educational Career Highlights</h2>
+            <div class="education">
+                <div class="education-item">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="Education 1">
+                    <div class="item-content">
+                        <h3>MFA in Digital Arts</h3>
+                        <p>University of Creative Technology, Class of 2020</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e" alt="Education 2">
+                    <div class="item-content">
+                        <h3>Certified Creative Educator</h3>
+                        <p>International Board of Creative Education, 2022</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <img src="https://images.unsplash.com/photo-1531496681078-27dc2277e898" alt="Education 3">
+                    <div class="item-content">
+                        <h3>Emerging Technologies Workshop</h3>
+                        <p>Future of Art and Design Institute, Summer 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Contact: jane.doe@email.com | © 2025 Jane Doe</p>
+        </div>
+    </footer>
+</body>
+</html>
