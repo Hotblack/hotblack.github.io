@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User-editable Shapes</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    </script>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./dragons.css">
+
+  </head>
+
+  <body style="background-image:url(north-america-w_0465.jpg)">
+
+
+    <div class="title">
+        <h1>Here Lies Dragons - Custom Map Ordering</h1>
+    </div>
+
+    <div class = "intro">
+      <button class="introButton">Instructions</button>
+      <h2 class="introText">THis is a test. I hope that it works.</h2>
+    </div>
+
+    <div class = "mapView">
+      <button class="mapButton">Show Map</button>
+      <div class = "saveView">
+        <button class="saveButton">Save Map</button>
+      </div>
+      
+      
+    </div>
+
+    <div id="map"></div>
+
+   <script>
+      //why do i have to do this here? why doesn't it work in the css file?
+      //document.getElementById("saveButton").style.display = "none";
+
+
+        function initMap(){
+                   
+        }
+
+
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdWvw-nnR8fxJzx1X6POJ1hvFkCZbgX2I&signed_in=true&callback=initMap"
+    async defer></script>
+
+
+<script>
+
+// $(document).ready(function() {
+//   $('.mapButton').click(function() {
+//     $( ".saveView" ).animate({ "left": "+=50px" }, "slow" );
+//   });
+// });
+
+$( ".mapButton" ).click(function() {
+ $(".saveView").animate({width:'toggle'},350);
+});
+
+// $("mapButton").click(function () {
+//           $(this).show("slide", { direction: "left" }, 1000);
+//     });
+
+
+
+      $(document).ready(function(){
+          $(".introButton").click(function(){
+              $(".introText").slideToggle();
+          });
+      });
+
+      //had to initialize the map using the callback function in slideToggle
+      // http://stackoverflow.com/questions/8507059/google-maps-api-and-jquery-slide-toggle-not-initialising-map-correctly
+      //learn more about callbacks
+      $(document).ready(function (){
+          $(".mapButton").click(function(){
+              $("#map").slideToggle(function initialize() {
+                  // create the map
+
+                var myOptions = {
+                    zoom: 10,
+                    center: new google.maps.LatLng(40.7142700 , -74.0059700),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                  }
+                    map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+                 });
+
+             //google.maps.event.trigger(map, 'resize');
+          });
+      });
+
+    // $(function () {
+    //     $('button').click(function () {
+    //       $('h2', this).stop().slideToggle(500);
+    //       });
+    //     });
+
+</script>
+
+
+      
+
+  </body>
+</html>

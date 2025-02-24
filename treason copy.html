@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Treason - An espionage-themed interactive theatrical experience">
+    <meta name="author" content="Adam Jackrel">
+    <link rel="icon" href="/favicon.ico"> <!--  Consider using a real favicon -->
+
+    <title>Treason - Interactive Theatrical Experience</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles (Keep this, but review for modernization) -->
+    <link href="treason.css" rel="stylesheet">
+
+    <!--  No need for IE conditional comments or shims with modern Bootstrap -->
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Treason</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#press">Press</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trailer">Trailer</a>
+            </li>
+          </ul>
+          <!--  Search bar can go here if needed -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active bg-dark">  <!-- Added bg-dark for better contrast if image fails -->
+          <img src="treasonBanner.jpg" alt="Treason Banner" class="d-block w-100">  <!-- d-block w-100 makes the image responsive -->
+          <div class="container">
+            <div class="carousel-caption text-start">  <!--  More control over caption position -->
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- Add more carousel items here if needed -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <!-- Marketing content -->
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <!--  Consider using an image here -->
+          <h2>About</h2>
+          <p>Learn more about the Treason experience and its creators.</p>
+          <p><a class="btn btn-secondary" href="#about">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <!-- Consider using an image here -->
+          <h2>Press</h2>
+          <p>Read articles and interviews about Treason.</p>
+          <p><a class="btn btn-secondary" href="#press">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <!-- Consider using an image here -->
+          <h2>Trailer</h2>
+          <p>Watch the official trailer for Treason.</p>
+          <p><a class="btn btn-secondary" href="#trailer">View trailer &raquo;</a></p>
+        </div>
+      </div><!-- /.row -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="about">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">About <span class="text-muted">Treason</span></h2>
+          <p class="lead">Treason is an espionage-themed, interactive, multimedia, theatrical experience that uses a cooperative game-like structure: by working together as a group with an unseen agent, players uncover a narrative that explores themes of cyber-security and surveillance. Participants are able to deconstruct and examine their relationships to power and authority through these simulated predicaments.
+              Treason was made possible by the Graduate Student Organisation Interdepartmental Grant at New York University, and was performed at the Game Play Festival 2014, at the Brick Theater in Brooklyn.</p>
+          <p class="lead">Created by: Sharang Biswas, Pierre Depaz, Adam Jackrel, and Amelia Winger-Bearskin</p>
+        </div>
+        <div class="col-md-5">
+          <!-- Add an image here related to the "About" section -->
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="treason_thumb.jpg" alt="About Treason">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="press">
+        <div class="col-md-7 order-md-2">  <!-- order-md-2 swaps the order on medium screens and up -->
+          <h2 class="featurette-heading">Press <span class="text-muted">Coverage</span></h2>
+          <p class="lead"><a href="http://automaton.am/articles/beyond-screen/dungeons-drama-when-games-become-theater/">Dungeons & Drama: When Games Become Theater</a></p>
+          <p class="lead"><a href="https://www.youtube.com/watch?v=nZwuewTvwr4" target="_blank">Couch TV - Treason Interview</a></p>
+          <p class="lead"><a href="http://gamecenter.nyu.edu/mfa-pierre-depaz-premieres-treason-at-brick-theater/">NYU Game Center interview</a></p>
+        </div>
+        <div class="col-md-5 order-md-1"> <!-- order-md-1 swaps the order on medium screens and up -->
+          <!-- Add an image here related to the "Press" section -->
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="media.jpeg" alt="Press Coverage">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="trailer">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Watch the Trailer <span class="text-muted">Treason</span></h2>
+          <iframe src="https://player.vimeo.com/video/102290755" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+          <p><a href="https://vimeo.com/102290755">Treason Trailer</a> from <a href="https://vimeo.com/user20548431">Sharang Biswas</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        </div>
+        
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2015 Adam Jackrel.</p>
+    </footer>
+  </main>
+
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="holder.js"></script> <!--  For the placeholder images -->
+
+</body>
+</html>
