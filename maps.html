@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here Lies Dragons | Archival Wood Cartography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0c0c0e;       
+            --bg-panel: #141417;      
+            --text-light: #e8e5df;    
+            --text-muted: #9a978e;    
+            --brass-accent: #c4a265;  
+            --frame-border: #2a2a2c;  
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Navigation Bar --- */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(12, 12, 14, 0.95) 0%, rgba(12, 12, 14, 0.6) 60%, transparent 100%);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-logo span {
+            color: var(--brass-accent);
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links a:hover {
+            color: var(--brass-accent);
+        }
+
+        /* --- Parallax Foundations --- */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parallax::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(12, 12, 14, 0.5), rgba(12, 12, 14, 0.85));
+            z-index: 1;
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Taller Parallax Backgrounds */
+        .hero-parallax {
+            height: 100vh; /* Full screen height for maximum impact */
+            background-image: url('palestine_1606_web_1.jpg'); 
+        }
+
+        .divider-parallax-1 {
+            height: 70vh; /* Increased from 40vh */
+            background-image: url('north-america-w_0441.jpg'); 
+        }
+
+        .divider-parallax-2 {
+            height: 70vh; /* Increased from 40vh */
+            background-image: url('Moll_1719_promo_2.jpg'); 
+        }
+
+        /* --- Content Blocks --- */
+        .content-section {
+            background-color: var(--bg-dark);
+            padding: 150px 20px; /* Increased top/bottom padding for breathing room */
+            position: relative;
+            z-index: 5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: var(--brass-accent);
+            font-style: italic;
+            letter-spacing: 0.05em;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: 0.03em;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--brass-accent);
+            margin: 20px auto 0;
+        }
+
+        /* --- Intro Section --- */
+        .exhibition-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+        }
+
+        .exhibition-text p {
+            margin-bottom: 25px;
+        }
+
+        .exhibition-text .drop-cap {
+            float: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-top: 6px;
+            padding-right: 12px;
+            color: var(--brass-accent);
+        }
+
+        .provenance {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--brass-accent);
+            border-top: 1px solid var(--frame-border);
+            border-bottom: 1px solid var(--frame-border);
+            padding: 20px 0;
+            margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.8;
+        }
+
+        /* --- Process Section --- */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .process-column {
+            text-align: center;
+            padding: 50px 30px;
+            background: var(--bg-panel);
+            border: 1px solid var(--frame-border);
+            transition: border-color 0.4s ease;
+        }
+
+        .process-column:hover {
+            border-color: rgba(196, 162, 101, 0.3);
+        }
+
+        .process-column .step-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--brass-accent);
+            margin-bottom: 15px;
+            display: block;
+            font-style: italic;
+        }
+
+        .process-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+        }
+
+        .process-column p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 80px 40px;
+        }
+
+        .art-piece {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .art-canvas {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background-color: #050505;
+            border: 1px solid var(--frame-border);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .art-canvas::after {
+            content: 'Image Plate Missing';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-style: italic;
+            color: #222;
+            font-size: 0.9rem;
+            z-index: 0;
+        }
+
+        .art-canvas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.6s ease;
+        }
+
+        .art-piece:hover .art-canvas img {
+            transform: scale(1.03);
+        }
+
+        .placard {
+            border-left: 1px solid var(--brass-accent);
+            padding-left: 20px;
+        }
+
+        .placard h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .placard-details {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .placard-details strong {
+            font-weight: 400;
+            color: var(--brass-accent);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            margin-right: 5px;
+        }
+
+        .price {
+            margin-top: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            display: inline-block;
+        }
+
+        .sold {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--frame-border);
+        }
+
+        @media (max-width: 768px) {
+            .process-grid { grid-template-columns: 1fr; }
+            .exhibition-text { text-align: left; }
+            .divider-parallax-1, .divider-parallax-2 { height: 40vh; }
+            .top-nav { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-logo">Adam <span>Jackrel</span></a>
+        <div class="nav-links">
+            <a href="index.html#projects">&larr; Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <header class="parallax hero-parallax">
+        <div class="parallax-content">
+            <h1>Here Lies Dragons</h1>
+            <div class="subtitle">Archival Wood Cartography</div>
+        </div>
+    </header>
+
+    <section id="intro" class="content-section">
+        <div class="container exhibition-text">
+            <p><span class="drop-cap">H</span>ere Lies Dragons was an experimental crafting enterprise developed by Adam Jackrel, operating at the intersection of antiquarian cartography and modern fabrication. The studio utilized a synthesis of historic and contemporary techniques to bridge the gap between digital precision and tangible heritage.</p>
+            <p>Initial topographic layers were mapped and precision-cut using laser-etched veneered wood. Following this modern ablation, the pieces were submitted to rigorous, old-world traditional woodworking methods. This meticulous hand-finishing—involving sanding, deep staining, and archival sealing—not only enhanced the intricate details of the terrain but ensured the structural integrity and longevity of each artifact.</p>
+            
+            <div class="provenance">
+                Provenance: Extremely limited quality and numbered printings (2015–2019)
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax divider-parallax-1"></div>
+
+    <section id="process" class="content-section">
+        <div class="container">
+            <h2>The Studio Process</h2>
+            <div class="process-grid">
+                <div class="process-column">
+                    <span class="step-num">I.</span>
+                    <h3>Cartographic Research</h3>
+                    <p>Referencing historical maps and modern topographical data to create precise, high-fidelity vector drafts suitable for material translation.</p>
+                </div>
+                <div class="process-column">
+                    <span class="step-num">II.</span>
+                    <h3>Precision Etching</h3>
+                    <p>Utilizing modern CNC laser technology to ablate delicate bathymetric and topographic contour lines directly into raw wood veneers.</p>
+                </div>
+                <div class="process-column">
+                    <span class="step-num">III.</span>
+                    <h3>Archival Finishing</h3>
+                    <p>Applying traditional woodworking techniques—hand-joining, deep staining, and sealing—to transform the raw etching into a robust, gallery-ready heirloom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax divider-parallax-2"></div>
+
+    <section id="gallery" class="content-section">
+        <div class="container">
+            <h2>Exhibition Catalog</h2>
+            <div class="gallery-grid">
+                
+                <article class="art-piece">
+                    <div class="art-canvas">
+                        <img src="palestine_1606_promo_7.jpg" alt="Wood map showing the Topography of the Nile Delta">
+                    </div>
+                    <div class="placard">
+                        <h4>Palestine (1606)</h4>
+                        <ul class="placard-details">
+                            <li><strong>Size:</strong> 20x16"</li>
+                            <li><strong>Materials:</strong> Basswood, Gun Oil, and Wax</li>
+                        </ul>
+                        <div class="price sold">$400 USD</div>
+                    </div>
+                </article>
+
+                <article class="art-piece">
+                    <div class="art-canvas">
+                        <img src="north-america-w_0441.jpg" alt="Wood map showing the Topography of the Nile Delta">
+                    </div>
+                    <div class="placard">
+                        <h4>North America</h4>
+                        <ul class="placard-details">
+                            <li><strong>Size:</strong> 24x18"</li>
+                            <li><strong>Materials:</strong> Basswood, Danish Oil, and Wax</li>
+                        </ul>
+                        <div class="price">$600 USD</div>
+                    </div>
+                </article>
+
+                <article class="art-piece">
+                    <div class="art-canvas">
+                        
+                    </div>
+                    <div class="placard">
+                        <h4>Manhattan Island, 1842</h4>
+                        <ul class="placard-details">
+                            <li><strong>Date:</strong> 2015</li>
+                            <li><strong>Materials:</strong> Maple, Mahogany Inlay, Beeswax Finish</li>
+                        </ul>
+                        <div class="price sold">Sold Out</div>
+                    </div>
+                </article>
+
+                <article class="art-piece">
+                    <div class="art-canvas"></div>
+                    <div class="placard">
+                        <h4>Paris Basin & Environs</h4>
+                        <ul class="placard-details">
+                            <li><strong>Date:</strong> 2018</li>
+                            <li><strong>Materials:</strong> Ash Veneer, Reclaimed Teak Frame</li>
+                        </ul>
+                        <div class="price">$1,200 USD</div>
+                    </div>
+                </article>
+
+                <article class="art-piece">
+                    <div class="art-canvas"></div>
+                    <div class="placard">
+                        <h4>Coastal Maine Contours</h4>
+                        <ul class="placard-details">
+                            <li><strong>Date:</strong> 2019</li>
+                            <li><strong>Materials:</strong> White Oak, Oxidized Iron, Linseed Oil</li>
+                        </ul>
+                        <div class="price">$950 USD</div>
+                    </div>
+                </article>
+
+                <article class="art-piece">
+                    <div class="art-canvas"></div>
+                    <div class="placard">
+                        <h4>The Mediterranean Basin</h4>
+                        <ul class="placard-details">
+                            <li><strong>Date:</strong> 2018</li>
+                            <li><strong>Materials:</strong> Cedar Veneer, Bronze Leaf, Varnish</li>
+                        </ul>
+                        <div class="price sold">Private Collection</div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2015 - 2019 Here Lies Dragons. Curated by Adam Jackrel.</p>
+    </footer>
+
+</body>
+</html>

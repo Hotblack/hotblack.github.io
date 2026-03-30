@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Jackrel - Creative Technologist & Educator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #872341;
+            --secondary-color: #E17564;
+            --bg-color: #09122C;
+            --card-bg: #111B3D;
+            --text-main: #F8F9FA;
+            --text-muted: #A0AABF;
+            --transition-speed: 0.3s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Navigation --- */
+        header {
+            background-color: rgba(9, 18, 44, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- Ultra-Compact Hero Section --- */
+        .hero {
+            height: 30vh; 
+            min-height: 250px;
+            background-image: linear-gradient(to bottom, rgba(9, 18, 44, 0.85), rgba(9, 18, 44, 1)), url("Virginia_0418.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 5px;
+            color: var(--text-main);
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+            font-weight: 300;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Main Content & Multi-Column Grid --- */
+        main {
+            padding: 40px 0;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: var(--text-main);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            text-align: left;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+
+        /* --- Compact Grid Cards --- */
+        a.card-link, .card-wrapper {
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            height: 100%;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column; 
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all var(--transition-speed) ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); 
+            border-color: rgba(225, 117, 100, 0.4);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .img-wrapper {
+            width: 100%;
+            height: 160px; /* Increased slightly to give un-zoomed images space */
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.4); /* Darkened to blend letterboxing better */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* Adds a nice internal border so images don't touch the edges */
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* This prevents the zooming/cropping! */
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .card:hover .img-wrapper img {
+            transform: scale(1.03); /* Kept a very subtle scale on hover to keep it dynamic */
+        }
+
+        .item-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; 
+            background: linear-gradient(180deg, var(--card-bg) 0%, rgba(17, 27, 61, 0.6) 100%);
+        }
+
+        .item-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .item-content p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-main);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 13px;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Adam <span>Jackrel</span></div>
+            <ul class="nav-links">
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Creative <span>Technologist</span> & Educator</h1>
+            <p>Transforming ideas into visual experiences.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section id="education" class="section">
+            <h2>Educational Career Highlights</h2>
+            <div class="grid-container">
+                
+                <a href="https://ajackrel.github.io/android-page/" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="Android_robot.png" alt="Building Android Apps">
+                        </div>
+                        <div class="item-content">
+                            <h3>Building Android Apps</h3>
+                            <p>Teaching new engineers how to produce high-quality mobile apps.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="fullstack_burger.jpg" alt="Fullstack Engineering">
+                        </div>
+                        <div class="item-content">
+                            <h3>Fullstack Engineering</h3>
+                            <p>Diving into fullstack engineering using a MERN stack.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="ml.html" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="ai.png" alt="AI/ML Models">
+                        </div>
+                        <div class="item-content">
+                            <h3>AI/ML Models</h3>
+                            <p>Designing custom-made machine learning models using TensorFlow.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="ftc.gif" alt="FIRST Robotics">
+                        </div>
+                        <div class="item-content">
+                            <h3>FIRST Robotics</h3>
+                            <p>Mentoring students and leading teams through the engineering design process.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="maker.jpg" alt="Makerspaces">
+                        </div>
+                        <div class="item-content">
+                            <h3>Makerspaces</h3>
+                            <p>Designing and managing dynamic school makerspaces to foster hands-on learning.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="creative_coding.jpg" alt="Creative Coding">
+                        </div>
+                        <div class="item-content">
+                            <h3>Creative Coding</h3>
+                            <p>Teaching students to express themselves visually through Python, JavaScript, and Snap!.</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Personal Projects</h2>
+            <div class="grid-container">
+                
+                <a href="treason.html" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="treason_thumb.jpg" alt="TREASON! Theatre Experience">
+                        </div>
+                        <div class="item-content">
+                            <h3>TREASON!</h3>
+                            <p>A multi-media theatre experience performed at the Brick Theatre in Brooklyn, NY.</p>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="fab_sidebar.html" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="swift_2.jpg" alt="Taylor Swift 1989 Tour LED Dress">
+                        </div>
+                        <div class="item-content">
+                            <h3>Taylor Swift 1989 Tour</h3>
+                            <p>Designing LED-integrated costumes for Taylor Swift and backup dancers.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="fab_sidebar.html" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="ledsuits_1.gif" alt="Burning Man LED Suits">
+                        </div>
+                        <div class="item-content">
+                            <h3>Burning Man LED Suits</h3>
+                            <p>Designed and built two interactive LED suits for a private client at Burning Man.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="maps.html" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="palestine_1606_web_1.jpg" alt="Here Lies Dragons - Wood Maps">
+                        </div>
+                        <div class="item-content">
+                            <h3>Here Lies Dragons</h3>
+                            <p>Designing and fabricating custom, laser-cut topographic wooden maps.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="fab_sidebar.html" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="burn.gif" alt="Interactive Installations">
+                        </div>
+                        <div class="item-content">
+                            <h3>Interactive Installations</h3>
+                            <p>Building immersive physical computing experiences using sensors and Raspberry Pi.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="game_design.jpg" alt="Game Design">
+                        </div>
+                        <div class="item-content">
+                            <h3>Game Design</h3>
+                            <p>Exploring game mechanics, narrative structures, and interactive development.</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Contact: ajackrel@gmail.com | © 2026 Adam Jackrel</p>
+        </div>
+    </footer>
+</body>
+</html>
